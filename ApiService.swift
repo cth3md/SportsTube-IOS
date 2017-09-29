@@ -5,26 +5,26 @@ class ApiService: NSObject {
     static let sharedInstance = ApiService()
     
     func fetchVideos(completion: ([Video]) -> ()) {
-        fetchFeedForUrlString("https://s3-us-west-2.amazonaws.com/youtubeassets/home.json") { (videos) in
+        fetchFeedForUrlString("https://s3-us-west-2.amazonaws.com/youtubeassets/NFL.json") { (videos) in
             completion(videos)
         }
     }
 
     
     func fetchBaseBallFeed(completion: ([Video]) -> ()) {
-        fetchFeedForUrlString("https://s3-us-west-2.amazonaws.com/youtubeassets/subscriptions.json") { (videos) in
+        fetchFeedForUrlString("https://s3-us-west-2.amazonaws.com/youtubeassets/MLB.json") { (videos) in
             completion(videos)
         }
     }
     
     func fetchNHLFeed(completion: ([Video]) -> ()) {
-        fetchFeedForUrlString("https://s3-us-west-2.amazonaws.com/youtubeassets/subscriptions.json") { (videos) in
+        fetchFeedForUrlString("https://s3-us-west-2.amazonaws.com/youtubeassets/NHL.json") { (videos) in
             completion(videos)
         }
     }
     
     func fetchNBAFeed(completion: ([Video]) -> ()) {
-        fetchFeedForUrlString("https://s3-us-west-2.amazonaws.com/youtubeassets/subscriptions.json") { (videos) in
+        fetchFeedForUrlString("https://s3-us-west-2.amazonaws.com/youtubeassets/NBA.json") { (videos) in
             completion(videos)
         }
     }
